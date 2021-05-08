@@ -1,0 +1,12 @@
+Number of processes that came into the system 25
+Number of processes that successfully completed 17
+Number of processes that missed their deadlines 8
+
+Average Waiting time of individual process :
+Process 1 Waiting time - 5.00000
+Process 2 Waiting time - 8.00000
+Process 3 Waiting time - 0.00000
+Process 4 Waiting time - 5.00000
+Process 5 Waiting time - 2.33333
+
+Average Waiting time of all the process 4.06667

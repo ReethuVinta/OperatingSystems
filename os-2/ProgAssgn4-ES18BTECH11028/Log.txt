@@ -1,0 +1,61 @@
+1st customer access request at 21:19:31:617
+2st customer access request at 21:19:31:617
+1st customer given access at 21:19:31:617
+2st customer given access at 21:19:31:617
+3st customer access request at 21:19:31:619
+3st customer given access at 21:19:31:619
+3st customer is exiting at 21:19:31:619
+1st customer is exiting at 21:19:31:621
+4st customer access request at 21:19:31:626
+4st customer given access at 21:19:31:626
+4st customer is exiting at 21:19:31:627
+5st customer access request at 21:19:31:627
+6st customer access request at 21:19:31:627
+6st customer given access at 21:19:31:627
+5st customer given access at 21:19:31:627
+2st customer is exiting at 21:19:31:629
+7st customer access request at 21:19:31:629
+7st customer given access at 21:19:31:629
+8st customer access request at 21:19:31:629
+8st customer given access at 21:19:31:630
+6st customer is exiting at 21:19:31:630
+5st customer is exiting at 21:19:31:631
+9st customer access request at 21:19:31:631
+9st customer given access at 21:19:31:631
+10st customer access request at 21:19:31:631
+10st customer given access at 21:19:31:631
+11st customer access request at 21:19:31:632
+12st customer access request at 21:19:31:632
+7st customer is exiting at 21:19:31:633
+8st customer is exiting at 21:19:31:635
+10st customer is exiting at 21:19:31:635
+9st customer is exiting at 21:19:31:639
+11st customer given access at 21:19:31:639
+12st customer given access at 21:19:31:639
+13st customer access request at 21:19:31:639
+13st customer given access at 21:19:31:639
+14st customer access request at 21:19:31:639
+14st customer given access at 21:19:31:639
+15st customer access request at 21:19:31:641
+12st customer is exiting at 21:19:31:641
+14st customer is exiting at 21:19:31:642
+11st customer is exiting at 21:19:31:642
+13st customer is exiting at 21:19:31:646
+15st customer given access at 21:19:31:647
+15st customer is exiting at 21:19:31:650
+1th thread waiting time is 58 microsecs
+2th thread waiting time is 19 microsecs
+3th thread waiting time is 12 microsecs
+4th thread waiting time is 12 microsecs
+5th thread waiting time is 67 microsecs
+6th thread waiting time is 19 microsecs
+7th thread waiting time is 27 microsecs
+8th thread waiting time is 18 microsecs
+9th thread waiting time is 21 microsecs
+10th thread waiting time is 13 microsecs
+11th thread waiting time is 6725 microsecs
+12th thread waiting time is 6689 microsecs
+13th thread waiting time is 26 microsecs
+14th thread waiting time is 26 microsecs
+15th thread waiting time is 5359 microsecs
+Average waiting time = 1272.73 microsecs

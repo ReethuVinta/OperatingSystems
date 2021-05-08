@@ -1,0 +1,65 @@
+Process P1; processing time=5; deadine:20; period:20 joined the system at time 0
+Process P2; processing time=3; deadine:8; period:8 joined the system at time 0
+Process P3; processing time=4; deadine:5; period:5 joined the system at time 0
+Process P4; processing time=10; deadine:5; period:5 joined the system at time 0
+Process P5; processing time=8; deadine:12; period:12 joined the system at time 0
+Process P3 starts executing at time 0
+Process P3 finishes executing at time 4
+Process P4 is removed from the ready queue as it would miss it's deadline at time 5
+Process P2 starts executing at time 4
+Process P2 is prempted by Process P3 at time 5 Remaining process time: 2
+Process P3 starts executing at time 5
+Process P3 finishes executing at time 9
+Process P4 is removed from the ready queue as it would miss it's deadline at time 10
+Process P2 is removed from the ready queue as it would miss it's deadline at time 8
+Process P5 is removed from the ready queue as it would miss it's deadline at time 12
+Process P1 starts executing at time 9
+Process P1 is prempted by Process P3 at time 10 Remaining process time: 4
+Process P3 starts executing at time 10
+Process P3 finishes executing at time 14
+Process P4 is removed from the ready queue as it would miss it's deadline at time 15
+Process P5 starts executing at time 14
+Process P5 is prempted by Process P4 at time 15 Remaining process time: 7
+Process P4 is removed from the ready queue as it would miss it's deadline at time 20
+Process P5 resumes executing at time 15
+Process P1 missed deadline at time 20
+Process P4 is removed from the ready queue as it would miss it's deadline at time 25
+Process P5 finishes executing at time 22
+Process P1 starts executing at time 22
+Process P1 is prempted by Process P5 at time 24 Remaining process time: 3
+Process P5 starts executing at time 24
+Process P5 finishes executing at time 32
+Process P1 resumes executing at time 32
+Process P1 finishes executing at time 35
+CPU is idle till time 36
+Process P5 starts executing at time 36
+Process P5 finishes executing at time 44
+Process P1 starts executing at time 44
+Process P1 is prempted by Process P5 at time 48 Remaining process time: 1
+Process P5 starts executing at time 48
+Process P5 finishes executing at time 56
+Process P1 resumes executing at time 56
+Process P1 finishes executing at time 57
+CPU is idle till time 60
+Process P5 starts executing at time 60
+Process P5 finishes executing at time 68
+Process P1 starts executing at time 68
+Process P1 finishes executing at time 73
+CPU is idle till time 80
+Process P1 starts executing at time 80
+Process P1 finishes executing at time 85
+CPU is idle till time 100
+Process P1 starts executing at time 100
+Process P1 finishes executing at time 105
+CPU is idle till time 120
+Process P1 starts executing at time 120
+Process P1 finishes executing at time 125
+CPU is idle till time 140
+Process P1 starts executing at time 140
+Process P1 finishes executing at time 145
+CPU is idle till time 160
+Process P1 starts executing at time 160
+Process P1 finishes executing at time 165
+CPU is idle till time 180
+Process P1 starts executing at time 180
+Process P1 finishes executing at time 185

@@ -1,0 +1,112 @@
+I certify that this assignment/report is my own work, based on my personal
+study and/or research and that I have acknowledged all material and sources
+used in its preparation, whether they be books, articles, reports, lecture notes,
+and any other kind of document, electronic or personal communication. I also
+certify that this assignment/report has not previously been submitted for
+assessment in any other course, except where specific permission has been granted
+from all course instructors involved, or at any other time in this course, and that I
+have not copied in part or whole or otherwise plagiarised the work of other
+students and/or persons. I pledge to uphold the principles of honesty and responsibility at
+CSE@IITH. In addition, I understand my responsibility to report honour violations by other
+students if I become aware of it.
+Name:   Vinta Reethu
+Date:   26-04-2021
+Signature: Vinta
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+Experiment 1 :
+
+a.  os@os:~$ swapon -s
+    os@os:~$ 
+    
+    No Output to display indicating swap is offed.
+b.  Before running the program 
+    free -mh output is 
+                  total        used        free      shared  buff/cache   available
+    Mem:           985M         97M        784M        752K        102M        765M
+    Swap:            0B          0B          0B
+
+    After running the program 
+    free -mh output is
+                  total        used        free      shared  buff/cache   available
+    Mem:           985M        806M         71M        752K        106M         55M
+    Swap:            0B          0B          0B
+
+c.  Before running the program 
+    vmstat -t 1 output is 
+    procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- -----timestamp-----
+    r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st                 UTC
+    0  0      0 803300  21340  83720    0    0    22    36   22  131  0  0 99  0  0 2021-04-26 08:28:01
+    0  0      0 803100  21340  83720    0    0     0     0   18   34  0  0 100  0  0 2021-04-26 08:28:02
+    0  0      0 803100  21340  83720    0    0     0     0   17   35  0  0 100  0  0 2021-04-26 08:28:03
+    0  0      0 803132  21340  83720    0    0     0     0   22   43  0  0 100  0  0 2021-04-26 08:28:04
+
+    After running the program 
+    vmstat -t 1 output is 
+    procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- -----timestamp-----
+    r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st                 UTC
+    0  0      0 777372  22652 107976    0    0    23    35   23  147  0  0 99  0  0 2021-04-26 08:29:16
+    0  0      0 777404  22652 107976    0    0     0     0   20   40  0  0 100  0  0 2021-04-26 08:29:17
+    0  0      0 777404  22652 107976    0    0     0     0   27   61  0  0 100  0  0 2021-04-26 08:29:18
+    0  0      0 777404  22652 107976    0    0     0     0   28   58  0  0 100  0  0 2021-04-26 08:29:19
+    2  0      0 680368  22652 107976    0    0     0     0 4040 52100 11 40 48  0  1 2021-04-26 08:29:20
+    2  0      0 472384  22652 107976    0    0     0     0 5547 109939 22 78  0  0  0 2021-04-26 08:29:21
+    2  0      0 261060  22652 107976    0    0     0     0 5722 111881 25 75  0  0  0 2021-04-26 08:29:22
+    1  0      0  65588  22652 107976    0    0     0     0 5665 104307 25 75  0  0  0 2021-04-26 08:29:23
+    0  0      0  73568  16956  91944    0    0     0     0  738 8030  1 12 87  0  0 2021-04-26 08:29:24
+    0  0      0  73568  16956  91944    0    0     0     0   17   38  0  0 100  0  0 2021-04-26 08:29:25
+    0  0      0  73568  16956  91944    0    0     0     0   19   37  0  0 100  0  0 2021-04-26 08:29:26
+
+d. The program run for 86499 iterations. At the 86500th iteration there was only 71MB free space avialble 
+   but it needed 100MB, hence the malloc failed.
+
+
+Experiment 2 :
+a.  os@os:~$ swapon -s
+    Filename				Type		Size	Used	Priority
+    /swap.img                              	file    	1338364	0	-2
+    os@os:~$ 
+    swap file is enabled
+
+b. Before running the program 
+    free -mh output is 
+                  total        used        free      shared  buff/cache   available
+    Mem:           985M         98M        778M        752K        108M        762M
+    Swap:          1.3G          0B        1.3G
+
+c.  Before running the program 
+    vmstat -t 1 output is
+    procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- -----timestamp-----
+    r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st                 UTC
+    0  0      0 797132  17132  93536    0    0    22    35   24  161  0  0 99  0  0 2021-04-26 08:35:23
+    0  0      0 797156  17132  93536    0    0     0     0   25   53  0  0 100  0  0 2021-04-26 08:35:24
+    0  0      0 797156  17132  93536    0    0     0     0   22   44  0  0 100  0  0 2021-04-26 08:35:25
+    0  0      0 797156  17132  93536    0    0     0     0   15   29  0  0 100  0  0 2021-04-26 08:35:26
+    0  0      0 797156  17132  93536    0    0     0     0   20   41  1  0 99  0  0 2021-04-26 08:35:27
+
+    After running the program 
+    vmstat -t 1 output is 
+    procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- -----timestamp-----
+    r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st                 UTC
+    0  0  29604 918120   2880  30508    1  102    31   137   30  268  0  0 99  0  0 2021-04-26 08:38:37
+    0  0  29604 918112   2880  30508    0    0     0     0   18   39  0  1 99  0  0 2021-04-26 08:38:38
+    0  0  29604 918112   2880  30508    0    0     0     0   27   56  0  0 100  0  0 2021-04-26 08:38:39
+    2  0  29604 746024   2880  30516    8    0    16     0 7068 92672 20 78  2  0  0 2021-04-26 08:38:40
+    2  0  29604 545576   2880  30516    0    0     0     0 5633 106536 17 83  0  0  0 2021-04-26 08:38:41
+    2  0  29604 342464   2880  30516    0    0     0     0 5664 107810 19 81  0  0  0 2021-04-26 08:38:42
+    2  0  29604 120472   2880  30516    0    0     0     0 5619 116930 24 75  0  0  1 2021-04-26 08:38:43
+    2  0 125696  64772     96  19236   92 96200  1688 96200 4686 88235 15 85  0  0  0 2021-04-26 08:38:44
+    3  0 303616  63376     92  18752   60 177984  2448 177984 4616 94194 15 85  0  0  0 2021-04-26 08:38:45
+    3  0 487396  63492     96  19152  124 183584  3644 183584 4537 85969 17 83  0  0  0 2021-04-26 08:38:46
+    3  0 667392  69980    104  18664  120 182704  2440 182704 4492 85614 12 88  0  0  0 2021-04-26 08:38:47
+    3  0 814848  60612    104  18644  168 144996  2552 144996 4259 82882 15 85  0  0  0 2021-04-26 08:38:48
+    1  1 841984  48732     88  17184 9324 33844 143764 33860 5305 35184  1 96  1  3  0 2021-04-26 08:38:53
+    0  1  26112 927624   1128  25888  580    0  3308     0  553 1303  0 23  0 77  0 2021-04-26 08:38:54
+    0  1  26112 927624   1128  25892    0    0     0     0   25   31  0  0  0 100  0 2021-04-26 08:38:55
+    0  0  26112 923068   1128  30300   32    0  4100     0   88  168  1  0 97  2  0 2021-04-26 08:38:56
+
+d. The program run for 202542 iterations before it got killed. In the above vmstat output we can see that 
+    swpd number is increasing meaning that main memmory is swapping file from and to disk space.
+    

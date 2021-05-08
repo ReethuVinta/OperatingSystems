@@ -1,0 +1,226 @@
+I certify that this assignment/report is my own work, based on my personal
+study and/or research and that I have acknowledged all material and sources
+used in its preparation, whether they be books, articles, reports, lecture notes,
+and any other kind of document, electronic or personal communication. I also
+certify that this assignment/report has not previously been submitted for
+assessment in any other course, except where specific permission has been granted
+from all course instructors involved, or at any other time in this course, and that I
+have not copied in part or whole or otherwise plagiarised the work of other
+students and/or persons. I pledge to uphold the principles of honesty and responsibility at
+CSE@IITH. In addition, I understand my responsibility to report honour violations by other
+students if I become aware of it.
+Name:   Vinta Reethu
+Date:   26-04-2021
+Signature: Vinta
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+Problem Statement 1: 
+Experiment 1:
+
+Process 1 - 
+
+a.  Output from running sample program : 
+
+    Pid of program is - 7854
+    &global=0x5614653db010 &local=0x7ffeb2110da4 &main=0x5614651da71a
+
+b.  
+    -----------------------------------------------------------
+    Code segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    5614651da000-5614651db000           4K          r-xp 
+    7f68f9b45000-7f68f9d2c000           1948K       r-xp
+    7f68f9f36000-7f68f9f5f000           164K        r-xp
+    7ffeb2134000-7ffeb2136000           8K          r-xp
+    ffffffffff600000-ffffffffff601000   4K          r-xp
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Data segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    5614653db000-5614653dc000           4K          rw-p
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Stack segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    7ffeb20f2000-7ffeb2113000           132K        rw-p
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Heap segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    56146622c000-56146624d000           132K        rw-p
+    -----------------------------------------------------------
+
+c.  i)
+    -----------------------------------------------------------
+    variable                Page frame number       Physical Address
+    -----------------------------------------------------------
+    global variable         0x28f17                 0x8180000000028f17  
+    local variable          0x12220                 0x8180000000012220  
+    main() function         0x1d194                 0xa08000000001d194
+    -----------------------------------------------------------
+
+d.  iii)
+    -----------------------------------------------------------
+    segment                 Page frame number       Physical Address
+    -----------------------------------------------------------
+    code segment            0x1d194                 0xa08000000001d194  
+    date segment            0x28f17                 0x8180000000028f17  
+    stack segment           Page not present 
+    heap segment            0x23b0c                 0x8180000000023b0c  
+    -----------------------------------------------------------
+
+
+Process 2 - 
+
+a.  Output from running sample program : 
+
+    Pid of program is - 7856
+    &global=0x55e74ed78010 &local=0x7fff35736c54 &main=0x55e74eb7771a
+
+b.  
+    -----------------------------------------------------------
+    Code segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    55e74eb77000-55e74eb78000           4K          r-xp 
+    7f68f9b45000-7f68f9d2c000           1948K       r-xp
+    7fc05d2e9000-7fc05d312000           164K        r-xp
+    7fff3577f000-7fff35781000           8K          r-xp
+    ffffffffff600000-ffffffffff601000   4K          r-xp
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Data segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    55e74ed78000-55e74ed79000           4K          rw-p
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Stack segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    7fff35718000-7fff35739000           132K        rw-p
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Heap segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    55e75058f000-55e7505b0000           132K        rw-p
+    -----------------------------------------------------------
+
+c.  i)
+    -----------------------------------------------------------
+    variable                Page frame number       Physical Address
+    -----------------------------------------------------------
+    global variable         0x211b9                 0x81800000000211b9  
+    local variable          0x16731                 0x8180000000016731  
+    main() function         0x1d194                 0xa08000000001d194
+    -----------------------------------------------------------
+
+d.  iii)
+    -----------------------------------------------------------
+    segment                 Page frame number       Physical Address
+    -----------------------------------------------------------
+    code segment            0x1d194                 0xa08000000001d194  
+    date segment            0x211b9                 0x81800000000211b9  
+    stack segment           Page not present 
+    heap segment            0x136f3                 0x81800000000136f3  
+    -----------------------------------------------------------
+
+c. ii) The page numbers of libc’s text segment are the same ie: 0x12265.
+d. i)   ASLR :  If all the address spaces are arranged in a known order in the address spaces it 
+                is easy for people to illegally access them and do code injection. 
+                With the help of ASLR(Address Space Layout Randomization) the OS will randomize the 
+                address spaces by placing them in unpredictable locations which makes it impossible 
+                to get the locations in the code.
+d. ii) length of virtual addresses = 12 bit = 2^12 Bytes
+       length of physical addresses = 16 bit = 2^16 Bytes
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+Experiment 2:
+
+a. 
+    Pid of program is - 7904
+    &global_unint = 0x555ac909c01c 
+    &constant_global_max = 0x555ac909c014 
+    &constant_local_max = 0x7ffd901f612c 
+    &ptr = 0x555aca4b3004
+    &global=0x555ac909c010 &local=0x7ffd901f6128 &main = 0x555ac8e9b76a
+
+    -----------------------------------------------------------
+    Code segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    555ac8e9b000-555ac8e9c000           4K          r-xp 
+    7f2a5ab40000-7f2a5ad27000           1948K       r-xp
+    7f2a5af31000-7f2a5af5a000           164K        r-xp
+    7ffd901fb000-7ffd901fd000           8K          r-xp
+    ffffffffff600000-ffffffffff601000   4K          r-xp
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Data segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    555ac909c000-555ac909d000           4K          rw-p
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Stack segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    7ffd901d7000-7ffd901f8000           132K        rw-p
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    Heap segment :
+    -----------------------------------------------------------
+    Address-Range                       Size        Permissions
+    -----------------------------------------------------------
+    555aca4b3000-555aca4d4000           132K        rw-p
+    -----------------------------------------------------------
+
+b.  ---------------------------------------------------------------------------------
+    variable                Page frame number       Physical Address        segment
+    ---------------------------------------------------------------------------------
+    global variable         0x1690d                 0x818000000001690d      data
+    global_unint            0x1690d                 0x818000000001690d      data
+    constant_global_max     0x1690d                 0x818000000001690d      data
+    constant_local_max      0x130e6                 0x81800000000130e6      stack
+    local variable          0x130e6                 0x81800000000130e6      stack
+    ptr                     0x15533                 0x8180000000015533      heap
+    main() function         0x24d08                 0xa180000000024d08      code
+    ---------------------------------------------------------------------------------
+c.  
+    -----------------------------------------------------------
+    segment                 Page frame number       Physical Address
+    -----------------------------------------------------------
+    code segment            0x24d08                 0xa180000000024d08  
+    data segment            0x1690d                 0x818000000001690d  
+    stack segment           Page not present 
+    heap segment            0x15533                 0x8180000000015533  
+    -----------------------------------------------------------

@@ -1,0 +1,56 @@
+Process P1; processing time=5; deadine:20; period:20 joined the system at time 0
+Process P2; processing time=3; deadine:8; period:8 joined the system at time 0
+Process P3; processing time=4; deadine:5; period:5 joined the system at time 0
+Process P4; processing time=10; deadine:5; period:5 joined the system at time 0
+Process P5; processing time=8; deadine:12; period:12 joined the system at time 0
+Process P3 starts executing at time 0.01000
+Process P3 finishes executing at time 4.01000
+Even if Process P4 is scheduled now, it would miss it's deadline at time 5.00000
+Process P2 starts executing at time 4.02000
+Process P2 finishes executing at time 7.02000
+Even if Process P3 is scheduled now, it would miss it's deadline at time 10.00000
+Even if Process P4 is scheduled now, it would miss it's deadline at time 10.00000
+Even if Process P5 is scheduled now, it would miss it's deadline at time 12.00000
+Process P1 starts executing at time 7.03000
+Process P3 starts executing at time 10.01000
+Process P3 finishes executing at time 14.01000
+Even if Process P4 is scheduled now, it would miss it's deadline at time 15.00000
+Process P1 finishes executing at time 16.04000
+Even if Process P4 is scheduled now, it would miss it's deadline at time 20.00000
+Even if Process P5 is scheduled now, it would miss it's deadline at time 24.00000
+CPU is idle till time 20.00000
+Even if Process P4 is scheduled now, it would miss it's deadline at time 25.00000
+Process P1 starts executing at time 20.01000
+Process P5 starts executing at time 24.01000
+Process P5 finishes executing at time 32.01000
+Process P1 finishes executing at time 33.02000
+CPU is idle till time 36.00000
+Process P5 starts executing at time 36.01000
+Process P5 finishes executing at time 44.01000
+Process P1 starts executing at time 44.02000
+Process P1 finishes executing at time 49.02000
+Process P5 starts executing at time 49.03000
+Process P5 finishes executing at time 57.03000
+CPU is idle till time 60.00000
+Process P5 starts executing at time 60.01000
+Process P5 finishes executing at time 68.01000
+Process P1 starts executing at time 68.02000
+Process P1 finishes executing at time 73.02000
+CPU is idle till time 80.00000
+Process P1 starts executing at time 80.01000
+Process P1 finishes executing at time 85.01000
+CPU is idle till time 100.00000
+Process P1 starts executing at time 100.01000
+Process P1 finishes executing at time 105.01000
+CPU is idle till time 120.00000
+Process P1 starts executing at time 120.01000
+Process P1 finishes executing at time 125.01000
+CPU is idle till time 140.00000
+Process P1 starts executing at time 140.01000
+Process P1 finishes executing at time 145.01000
+CPU is idle till time 160.00000
+Process P1 starts executing at time 160.01000
+Process P1 finishes executing at time 165.01000
+CPU is idle till time 180.00000
+Process P1 starts executing at time 180.01000
+Process P1 finishes executing at time 185.01000
